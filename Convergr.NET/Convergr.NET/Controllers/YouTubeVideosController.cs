@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Convergr.NET.Models;
-using Convergr.NET.ViewModels;
 
 namespace Convergr.NET.Controllers
 {
@@ -23,16 +22,17 @@ namespace Convergr.NET.Controllers
         }
 
         // GET: YouTube/Viewer
-        public ActionResult Random()
+        public ActionResult Viewer()
         {
-            var video = _context.YouTubeVideos.ToList();
-            var hashtags = _context.Hashtags.ToList();
-            var viewModel = new RandomYoutubeViewModels
-            {
-                Video = video.First(),
-                Hashtags = hashtags
+            var video = _context.YouTubeVideos;
+            var hashtags = _context.Hashtags;
 
+            var viewModel = new WatchViewModels
+            {
+                HashtagModels = hashtags,
+                YouTubeVideoModels = video
             };
+            
             return View(viewModel);
         }
     }
