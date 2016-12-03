@@ -8,7 +8,7 @@ namespace Convergr.NET.ViewModels
 {
     public class RandomYoutubeViewModels
     {
-        public YouTubeVideo Video { get; set; }
+        public YouTubeVideoModels Video { get; set; }
         public List<HashtagModels> Hashtags { get; set; }
 
     }

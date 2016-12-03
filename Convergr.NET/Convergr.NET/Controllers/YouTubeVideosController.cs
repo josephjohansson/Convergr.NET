@@ -8,11 +8,11 @@ using Convergr.NET.ViewModels;
 
 namespace Convergr.NET.Controllers
 {
-    public class YouTubeController : Controller
+    public class YouTubeVideosController : Controller
     {
         private ApplicationDbContext _context;
 
-        public YouTubeController()
+        public YouTubeVideosController()
         {
             _context = new ApplicationDbContext();
         }
@@ -22,7 +22,7 @@ namespace Convergr.NET.Controllers
             _context.Dispose();
         }
 
-        // GET: YouTube/Random
+        // GET: YouTube/Viewer
         public ActionResult Random()
         {
             var video = _context.YouTubeVideos.ToList();
