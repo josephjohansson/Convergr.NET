@@ -20,6 +20,9 @@ namespace Convergr.NET.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<HashtagModels> Hashtags { get; set; }
+        public DbSet<YouTubeVideo> YouTubeVideos { get; set; }
+        public DbSet<UniversityModels> Universities { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

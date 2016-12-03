@@ -1,10 +1,21 @@
-﻿@model Convergr.NET.Models.YouTubeVideo
+﻿@model Convergr.NET.ViewModels.RandomYoutubeViewModels
 @{
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.VideoTitle</h2>
+<h2>@Model.Video.VideoTitle</h2>
+
+<ul>
+    @foreach (var hastag in Model.Hashtags)
+    {
+        <li>@hastag.Name</li>
+    }
+</ul>
+
+
+
+
 <div id="player"></div>
 
 <script>
@@ -22,7 +33,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'cBSwJnZpUI8',
+          videoId: '@Model.Video.VideoTitle',
           events: {
             'onReady': onPlayerReady,
            

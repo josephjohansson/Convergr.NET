@@ -198,16 +198,43 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UniversitiesController.cs" />
     <Compile Include="Controllers\YouTubeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612030137211_InitialModel.cs" />
+    <Compile Include="Migrations\201612030137211_InitialModel.Designer.cs">
+      <DependentUpon>201612030137211_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612030147380_PopulateHashtags.cs" />
+    <Compile Include="Migrations\201612030147380_PopulateHashtags.Designer.cs">
+      <DependentUpon>201612030147380_PopulateHashtags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612030205078_PopulateYT.cs" />
+    <Compile Include="Migrations\201612030205078_PopulateYT.Designer.cs">
+      <DependentUpon>201612030205078_PopulateYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612030403459_CreateUniList.cs" />
+    <Compile Include="Migrations\201612030403459_CreateUniList.Designer.cs">
+      <DependentUpon>201612030403459_CreateUniList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612030406048_CreateUniList1.cs" />
+    <Compile Include="Migrations\201612030406048_CreateUniList1.Designer.cs">
+      <DependentUpon>201612030406048_CreateUniList1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClassModels.cs" />
+    <Compile Include="Models\FacultyViewModels.cs" />
+    <Compile Include="Models\HashtagModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UniversityModels.cs" />
     <Compile Include="Models\YouTubeVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Models\RandomYoutubeViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-paper.css" />
@@ -269,6 +296,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\YouTube\Random.cshtml" />
+    <Content Include="Views\Universities\Create.cshtml" />
+    <Content Include="Views\Universities\Delete.cshtml" />
+    <Content Include="Views\Universities\Details.cshtml" />
+    <Content Include="Views\Universities\Edit.cshtml" />
+    <Content Include="Views\Universities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +312,23 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612030137211_InitialModel.resx">
+      <DependentUpon>201612030137211_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612030147380_PopulateHashtags.resx">
+      <DependentUpon>201612030147380_PopulateHashtags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612030205078_PopulateYT.resx">
+      <DependentUpon>201612030205078_PopulateYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612030403459_CreateUniList.resx">
+      <DependentUpon>201612030403459_CreateUniList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612030406048_CreateUniList1.resx">
+      <DependentUpon>201612030406048_CreateUniList1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
