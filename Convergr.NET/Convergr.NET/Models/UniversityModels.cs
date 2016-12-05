@@ -5,10 +5,10 @@ using System.Web;
 
 namespace Convergr.NET.Models
 {
-    public class YouTubeVideo
+    public class UniversityModels
     {
         public int Id { get; set; }
-        public string VideoTitle { get; set; }
+        public string Name { get; set; }
+
     }
-    
 }

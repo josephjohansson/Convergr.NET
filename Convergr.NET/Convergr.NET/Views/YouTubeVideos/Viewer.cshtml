@@ -1,13 +1,16 @@
-﻿@model Convergr.NET.Models.YouTubeVideo
-@{
+﻿@model Convergr.NET.Models.WatchViewModels
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.VideoTitle</h2>
-<div id="player"></div>
 
-<script>
+@foreach (var video in Model.YouTubeVideoModels)
+{
+    if (video.Id == 2)
+    {
+        <h2>@video.VideoTitle</h2>
+        <div id="player"></div>
+        <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -22,7 +25,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'cBSwJnZpUI8',
+          videoId: '@video.VideoID',
           events: {
             'onReady': onPlayerReady,
            
@@ -39,6 +42,28 @@
       //    The function indicates that when playing a video (state=1),
       //    the player should play for six seconds and then stop.
      
-</script>
+        </script>
+    }
+
+}
+
+
+
+
+<ul>
+    @foreach (var hashtag in Model.HashtagModels)
+    {
+        if (hashtag.Type.Id == 2)
+         {
+             <li>@hashtag.Name</li>
+         }
+    }
+</ul>
+
+
+
+
+
+
 
 
